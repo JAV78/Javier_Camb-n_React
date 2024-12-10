@@ -1,0 +1,32 @@
+:root {
+    --color-primary: #4b3832;
+    --color-secondary: #d7a96b;
+    --color-background: #f8f4e3;
+    --font-family: 'Georgia', serif;
+    --card-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+.card {
+    background-color: var(--color-secondary);
+    border: 1px solid var(--color-primary);
+    color: var(--color-text);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    width: 300px;
+}
+
+.card:hover {
+    transform: scale(1.1);  
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
