@@ -1,0 +1,25 @@
+.item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin: 1rem;
+    border-radius: 8px;
+    width: 250px;
+}
+
+.item-container img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.item-container h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.item-container p {
+    margin: 0.5rem 0;
+}

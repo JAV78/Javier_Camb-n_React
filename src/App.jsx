@@ -1,30 +1,23 @@
-import Home from '../Components/pages/Home'
-import Layout from '../Components/Layout/Layout'
-import Nopage from '../Components/pages/Nopage'
-import Dulce from '../Components/pages/Dulce'
-import Salado from '../Components/pages/Salado'
-import Cafe from '../Components/pages/Cafe'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
+import Cart from "./components/Cart";
+import Item from "./components/ItemListContainer/Item";
 
-import {BrowserRouter, Routes, Route} from "react-router-dom";
-
-function App() {  
-
+function App() {
   return (
-    <>     
-      <BrowserRouter>          
+    <>
+      <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Layout/>}>
-            <Route index element={<Home/>}/>
-            <Route path='cafe' element={<Cafe/>}/>
-            <Route path='dulce' element={<Dulce/>}/>
-            <Route path='salado' element={<Salado/>}/>
-            <Route path='*' element={<Nopage/>}/>
-          </Route>
+          <Route path="/" element={<ItemListContainer greeting="Bienvenido a Isla Café" />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/items/:id" element={<Item />} />
+          <Route path="/cafe" element={<ItemListContainer greeting="Café" category="cafe" />} />
+          <Route path="/salado" element={<ItemListContainer greeting="Salado" category="salado" />} />
+          <Route path="/dulce" element={<ItemListContainer greeting="Dulce" category="dulce" />} />
         </Routes>
       </BrowserRouter>
-            
     </>
   );
 }
 
-export default App
+export default App;

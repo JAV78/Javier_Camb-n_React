@@ -15,5 +15,11 @@ const productsCoffe = [
         precio:250, categoria:"salado"}
 ];
 
-
-export default productsCoffe;
+const getProduct = () =>
+    new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(productsCoffe);
+      }, 3000);
+    });
+  
+  export default getProduct;
